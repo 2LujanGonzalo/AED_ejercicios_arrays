@@ -5,7 +5,7 @@
 int main (void){
 
   int numeros[100];
-  int promedio;
+  double promedio=0;
 
 srand(time(NULL));
 
@@ -14,6 +14,6 @@ for (int i = 0; i < 100; i++) {
  promedio += numeros[i];
 }
 
-printf("%.2f\n", promedio%100);
+printf("%.2f\n", promedio/100);
   return 0;
 }
