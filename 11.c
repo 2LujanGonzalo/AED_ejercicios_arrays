@@ -1,11 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
-int main(int argc, char  * argv[]) {
-argv[1];
+int main(int argc, char  *argv[]) {
+ argv[1];
+int i=0;
 
 
- printf("%d\n",strlen(argv[1]));
+ while (argv[1][i]) {
+   printf("%c",argv[1][i] );
+   i++;
+ }
+ printf("\n");
+    printf("Cantidad de caracteres:%d\n",i );
   return 0;
 }
