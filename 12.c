@@ -1,13 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdbool.h>
+
 
 int main(int argc, char  *argv[]) {
 argv[1];
-int CharCant= strlen(argv[1]);
-for (int i = 0; i < CharCant/2; i++) {
-  if (argv[1][i]==argv[1][CharCant-(i+1)]) {}}
-  printf("es capicua\n" );
 
+bool EsPalindromo=true;
+
+    int length=0;
+    while (argv[1][length] != 0) length++;
+
+for (int i = 0; i < length/2 ; i++) {
+  if (!(argv[1][i] == argv[1][length-i-1])) {
+    EsPalindromo=false;
+  }
+}
+
+if (EsPalindromo) {
+  printf("Es palindromo\n");
+}
   return 0;
 }
