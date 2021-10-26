@@ -31,16 +31,17 @@ char *morse[27]={
 /*y*/  "-.-- ",
 /*z*/  "--.. "};
 
-int i=0;
+int i;
+printf("%c\n", argc);
 for (int j = 1; j < argc; j++) {
-
+  i = 0;
   while (argv[j][i]!=0) {
     printf("%s",  morse[argv[j][i]-97] );
     i++;
   }
   printf("| " );
 }
-
+printf("\n" );
 
   return 0;
 }

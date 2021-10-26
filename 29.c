@@ -6,7 +6,7 @@ int main(void){
 int matriz1[4][4];
 int Cont=0;
 double ContMatFila=0;
-double ContMatColumna;
+double ContMatColumna=0;
 srand(time(NULL));
 for (int i = 0; i < 4; i++) {
   for (int j = 0; j < 4; j++) {

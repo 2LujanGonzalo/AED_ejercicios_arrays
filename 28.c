@@ -2,27 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void){
-  int matriz_A[4][4]={
-    3,9,6,1,
-    6,4,1,3,
-    7,3,3,10,
-    7,9,3,3
-  };
-  int matriz_B[4][4]={
-    10,7,9,5,
-    1,6,7,0,
-    1,1,1,1,
-    6,5,2,4
-  };
+int main(int argc, char  *argv[]) {
+int n = atoi(argv[1]);
 
-  int matriz_C[4][4];
+  int matriz_A[n][n];
+
+  int matriz_B[n][n];
+
+  int matriz_C[n][n];
+for (int i = 0; i < n; i++) {
+  for (int j = 0; j < n; j++) {
+    matriz_A[i][j]=0;
+    matriz_B[i][j]=0;
+    matriz_C[i][j]=0;
+  }
+}
+
   srand(time(NULL));
 //defino los valores de las matrices y las muestro
-  for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 4; j++) {
-    //  matriz_A[i][j]=rand()%11;
-    //  matriz_B[i][j]=rand()%11;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+     matriz_A[i][j]=rand()%11;
+     matriz_B[i][j]=rand()%11;
       printf("%d ", matriz_A[i][j]);
     }
     printf("\n" );
@@ -31,8 +32,8 @@ int main(void){
   printf("\n");
   printf("\n");
 
-  for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 4; j++) {
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
       printf("%d ", matriz_B[i][j]);
     }
     printf("\n" );
@@ -43,9 +44,9 @@ printf("\n");
 
 
 //multiplicación de matrices
-for (int i = 0; i < 4; i++) {
-  for (int j = 0; j < 4; j++) {
-    for (int k = 0; k < 4; k++) {
+for (int i = 0; i < n; i++) {
+  for (int j = 0; j < n; j++) {
+    for (int k = 0; k < n; k++) {
       matriz_C[i][j]+=matriz_A[i][k]*matriz_B[k][j];
     }
     printf("%d ",matriz_C[i][j] );
